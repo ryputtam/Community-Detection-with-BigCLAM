@@ -14,9 +14,10 @@ The data sample for this project is obtained from http://snap.stanford.edu/data/
 The algorithm implemented to identify communities is **BIGCLAM** (Cluster Affiliation Model for Big Networks), which is a better version of AGM (Community Affiliation Graph Model). The steps involved are :
 
 1.	**Factor Matrix Initialization**: A factor matrix of size N X K is initialized, where N is the number of nodes in the community and K is the number of communities in the groud truth file. The values are populated with three ways, random generation, as per 20 percent seed communities and neighborhood seed communities. The rest of the values in the factor matrix for the latter two methods is populated using conductance concept. Each node’s conductance with respect to the available communities is measured and the community with lower conductance value is assigned to the particular node.
+
 2.	**Factor Matrix Factorization**: Factor Matrix values are optimized using BIGCLAM V2.0 Algorithm.
-          
           Reference link for BIGCLAM V2.0 : https://youtu.be/Y78Kugdq24I
+          
 3.	**Assignment of Communities**: Based on the factor matrix values, nodes are assigned to the communities if the value is greater than a threshold value.
            The threshold value is  𝛿=sqrt( 1−log (1−𝜀)), where  𝜀 = 10-8
 
