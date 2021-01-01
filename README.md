@@ -2,14 +2,14 @@
 
 In Graphs and Networks, a node can be part of multiple communities. In simple words, let’s take Facebook friend list of a person ‘X’ and divide the list into communities such as school friends, gym friends, college friends, friends from work and so on. A friend can belong to one or more communities. This project aims to find out the overlapping communities in the given network.
 
-Input Data
+### Input Data
 
 There are two main datasets used in this project.
 1.	Youtube.edgelist file that serves as network
 2.	Three community files: ground truth, neighborhood seed, 20 percent seed
 The data sample for this project is obtained from http://snap.stanford.edu/data/com-Youtube.html
 
-Implementation
+### Implementation
 
 The algorithm implemented to identify communities is BIGCLAM (Cluster Affiliation Model for Big Networks), which is a better version of AGM (Community Affiliation Graph Model). The steps involved are :
 
